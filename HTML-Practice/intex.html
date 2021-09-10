@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/caefad7d7f.js" crossorigin="anonymous"></script>
+      <title>YOO API</title>
+  </head>
+
+  <body>
+
+    <!--Start SideBar -->
+    <div class="sidebar">
+      <!-- sidebar Header -->
+      <div class="logo-content">
+        <div class="logo">
+          <div class="logo-name">
+            YOOAPI
+          </div>
+        </div>
+        <i class="fas fa-bars" id="btn"></i>
+      </div>
+
+      <!-- sidebar navigation list -->
+      <ul class="nav-list">
+        <li>
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search...">
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span class="links_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span class="links_name">Management</span>
+          </a>
+          <span class="tooltip">Management</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span class="links_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span class="links_name">Driver</span>
+          </a>
+          <span class="tooltip">Driver</span>
+        </li>
+      </ul>
+    </div>
+    <!--End SideBar -->
+
+
+    <!-- Start Content -->
+    <div class="content">
+      <!-- Start Section -->
+      <section class="first-content-group">
+
+        <div class="first-content-padding">
+          <!-- Start Content Left -->
+          <div class="content-left">
+            <div class="content-header">User Registration</div>
+            <div class="top-bar-left">
+              <div class="api-type">POST</div>
+              <div class="api-link">/api/user/register</div>
+            </div>
+            <div class="table-box">
+              <div class="table-header">
+                <div class="table-header-cell">
+                  <p>Name</p>
+                </div>
+                <div class="table-header-cell">
+                  <p>Validate</p>
+                </div>
+              </div>    
+                    
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>First Name</p>
+                </div>
+                <div class="table-cell">
+                  <p>Required|String</p>
+                </div>
+              </div>   
+
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>First Name</p>
+                </div>
+                <div class="table-cell">
+                  <p>First Name</p>
+                </div>
+              </div>    
+               
+            </div>
+          </div>
+          <!-- End Content Left -->
+          
+          <!-- Start Content Right -->
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">Body Sample</div>
+              <pre class="sample" id="user_body"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="user_response"></pre>
+            </div>
+          </div>
+          <!-- End Content Right -->
+        </div>
+      </section>
+      <!-- End Section -->
+     
+    </div>
+    <!-- End Content -->
+
+
+    <!-- Start Script -->
+    <script>
+      let btn = document.querySelector("#btn");
+      let sidebar = document.querySelector(".sidebar");
+      let searchBtn = document.querySelector(".fa-search");
+      // start user
+      let user_body = 
+      {
+          "first_name" :"Juan",
+          "last_name" :"Magdadaro",
+          "mobile_number" :"+63922222222",
+          "email" :"juan@gmail.comdawdwa"
+      }
+      let user_response = 
+      {
+          "first_name" : "Juan",
+          "last_name" : "Magdadaro", 
+      }
+      // end user
+
+      document.getElementById('user_body').textContent = JSON.stringify(user_body, undefined, 2);
+      document.getElementById('user_response').textContent = JSON.stringify(user_response, undefined, 2);
+
+      btn.onclick = function(){
+        sidebar.classList.toggle("active");
+      }
+      searchBtn.onclick = function(){
+        sidebar.classList.toggle("active");
+      }
+      btn.onclick = function(){
+        sidebar.classList.toggle("active");
+      }
+    </script>
+    <!-- End Script -->
+  </body>
+</html>
+
+
+
+
+
