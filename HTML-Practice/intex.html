@@ -65,45 +65,88 @@
 
     <!-- Start Content -->
     <div class="content">
-      <!-- Start Section -->
+      <!-- Start User Registration -->
       <section class="first-content-group">
-
         <div class="first-content-padding">
           <!-- Start Content Left -->
           <div class="content-left">
             <div class="content-header">User Registration</div>
-            <div class="top-bar-left">
-              <div class="api-type">POST</div>
-              <div class="api-link">/api/user/register</div>
-            </div>
+            <div class="content-title">Headers</div>
             <div class="table-box">
               <div class="table-header">
                 <div class="table-header-cell">
-                  <p>Name</p>
+                  <p>KEY</p>
                 </div>
                 <div class="table-header-cell">
-                  <p>Validate</p>
+                  <p>VALUE</p>
                 </div>
               </div>    
-                    
               <div class="table-row">
                 <div class="table-cell">
-                  <p>First Name</p>
+                  <p>Accept</p>
                 </div>
                 <div class="table-cell">
-                  <p>Required|String</p>
+                  <p>application/json</p>
                 </div>
               </div>   
-
               <div class="table-row">
                 <div class="table-cell">
-                  <p>First Name</p>
+                  <p>Content-Type</p>
                 </div>
                 <div class="table-cell">
-                  <p>First Name</p>
+                  <p>application/json</p>
                 </div>
               </div>    
-               
+            </div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">first_name</div>
+                  <div class="parameter-content-header-type">string | required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string first name of users</p>
+                </div>
+              </div>
+              
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">last_name</div>
+                  <div class="parameter-content-header-type">string | required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string last name of users</p>
+                </div>
+              </div>
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">mobile_number</div>
+                  <div class="parameter-content-header-type">required | string | unique:users,mobile_number | min:13 | max:13</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string mobile number of users</p>
+                </div>
+              </div>
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">email</div>
+                  <div class="parameter-content-header-type">string</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input string email of users</p>
+                </div>
+              </div>
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">password</div>
+                  <div class="parameter-content-header-type">required | string</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string password of users</p>
+                </div>
+              </div>
             </div>
           </div>
           <!-- End Content Left -->
@@ -111,21 +154,668 @@
           <!-- Start Content Right -->
           <div class="content-right">
             <div class="content-border">
-              <div class="title">Body Sample</div>
-              <pre class="sample" id="user_body"></pre>
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/user/register</div>
+              </div>
+              <pre class="sample" id="user_body_registration"></pre>
             </div> 
             <div class="content-border">
               <div class="title">Response Sample</div> 
-              <pre class="sample" id="user_response"></pre>
+              <pre class="sample" id="user_response_registration "></pre>
             </div>
           </div>
           <!-- End Content Right -->
         </div>
       </section>
-      <!-- End Section -->
-     
+      <!-- End User Registration -->
+
+      <!-- Start User Login -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <!-- Start Content Left -->
+          <div class="content-left">
+            <div class="content-header">User Login</div>
+            <div class="content-title">Headers</div>
+            <div class="table-box">
+              <div class="table-header">
+                <div class="table-header-cell">
+                  <p>KEY</p>
+                </div>
+                <div class="table-header-cell">
+                  <p>VALUE</p>
+                </div>
+              </div>    
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Accept</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>   
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Content-Type</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>    
+            </div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">mobile_number</div>
+                  <div class="parameter-content-header-type">required | string | unique:users,mobile_number | min:13 | max:13</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string mobile number of users</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">password</div>
+                  <div class="parameter-content-header-type">required | string</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string password of users</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Content Left -->
+          
+          <!-- Start Content Right -->
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/user/login</div>
+              </div>
+              <pre class="sample" id="user_body_login"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="user_response_login"></pre>
+            </div>
+          </div>
+          <!-- End Content Right -->
+        </div>
+      </section>
+      <!-- End User Login -->
+
+      <!-- Start User Logout -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <!-- Start Content Left -->
+          <div class="content-left">
+            <div class="content-header">User Logout</div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">token</div>
+                  <div class="parameter-content-header-type">authorization token</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input authorization token of login user</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Content Left -->
+          
+          <!-- Start Content Right -->
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/user/logout</div>
+              </div>
+              <pre class="sample" id="user_body_logout"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="user_response_logout"></pre>
+            </div>
+          </div>
+          <!-- End Content Right -->
+        </div>
+      </section>
+      <!-- End User Logout -->
+
+      <!-- Start Mobile OTP -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Mobile OTP</div>
+            <div class="content-title">Headers</div>
+            <div class="table-box">
+              <div class="table-header">
+                <div class="table-header-cell">
+                  <p>KEY</p>
+                </div>
+                <div class="table-header-cell">
+                  <p>VALUE</p>
+                </div>
+              </div>    
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Accept</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>   
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Content-Type</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>    
+            </div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">mobile_number</div>
+                  <div class="parameter-content-header-type">required | string | unique:drivers,mobile_number | min:13 | max:13</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string Mobile number OTP for drivers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/driver/otp</div>
+              </div>
+              <pre class="sample" id="driver_body_mobileOtp"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="driver_response_mobileOtp"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Mobile OTP -->
+
+      <!-- Start Driver Pregister -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Drivers Pre-Register</div>
+            <div class="content-title">Headers</div>
+            <div class="table-box">
+              <div class="table-header">
+                <div class="table-header-cell">
+                  <p>KEY</p>
+                </div>
+                <div class="table-header-cell">
+                  <p>VALUE</p>
+                </div>
+              </div>    
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Accept</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>   
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Content-Type</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>    
+            </div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">otp</div>
+                  <div class="parameter-content-header-type">required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input OTP for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">mobile_number</div>
+                  <div class="parameter-content-header-type">required | min:13 | max:13</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string Mobile number drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">id</div>
+                  <div class="parameter-content-header-type">required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string ID drivers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/driver/pre-register</div>
+              </div>
+              <pre class="sample" id="driver_body_preRegister"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="driver_response_preRegister"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Drivers Preregister -->
+
+      <!-- Start Driver Register -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Drivers Register</div>
+            <div class="content-title">Headers</div>
+            <div class="table-box">
+              <div class="table-header">
+                <div class="table-header-cell">
+                  <p>KEY</p>
+                </div>
+                <div class="table-header-cell">
+                  <p>VALUE</p>
+                </div>
+              </div>    
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Accept</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>   
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Content-Type</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>    
+            </div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">mobile_number</div>
+                  <div class="parameter-content-header-type">required | min:13 | max:13 | unique:drivers,mobile_number</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to Input Mobile Number for driver registration</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">name</div>
+                  <div class="parameter-content-header-type">required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input name of drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">city</div>
+                  <div class="parameter-content-header-type">required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input city for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">vehicle_type</div>
+                  <div class="parameter-content-header-type">required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input vehicle type for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">driver_license_image</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input drivers liscense image for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">nbi_clearance</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input nbi clearance image for drivers</p>
+                </div>
+              </div>
+              
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">portrait</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input portrait image for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">vehicle_registration</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input vehicle registration image for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">vehicle_front</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input vehicle front image for drivers</p>
+                </div>
+              </div>
+              
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">vehicle_side</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input vehicle side for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">vehicle_back</div>
+                  <div class="parameter-content-header-type">mimes: jpeg, jpg, png | max:1999</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Input vehicle back for drivers</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">password</div>
+                  <div class="parameter-content-header-type">required</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string password for drivers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/driver/register</div>
+              </div>
+              <pre class="sample" id="driver_body_Register"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="driver_response_Register"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Drivers Register -->
+      
+      <!-- Start Driver Login -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Drivers Login</div>
+            <div class="content-title">Headers</div>
+            <div class="table-box">
+              <div class="table-header">
+                <div class="table-header-cell">
+                  <p>KEY</p>
+                </div>
+                <div class="table-header-cell">
+                  <p>VALUE</p>
+                </div>
+              </div>    
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Accept</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>   
+              <div class="table-row">
+                <div class="table-cell">
+                  <p>Content-Type</p>
+                </div>
+                <div class="table-cell">
+                  <p>application/json</p>
+                </div>
+              </div>    
+            </div>
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">mobile_number</div>
+                  <div class="parameter-content-header-type">required | string | max:13 | min:13</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to Input Mobile Number for driver to Login</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">password</div>
+                  <div class="parameter-content-header-type">required | string</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input password for drivers to login</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/driver/login</div>
+              </div>
+              <pre class="sample" id="driver_body_Login"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="driver_response_Login"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Drivers Login -->
+
+      <!-- Start Driver Logout -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Drivers Logout</div>
+            
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">token</div>
+                  <div class="parameter-content-header-type">authorization token</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input authorization token of login driver</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/driver/logout</div>
+              </div>
+              <pre class="sample" id="driver_body_Logout"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="driver_response_Logout"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Drivers Logout -->
+
+      <!-- Start Management Login -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Management Login</div>
+            
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">email</div>
+                  <div class="parameter-content-header-type">required | string</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string email for login management</p>
+                </div>
+              </div>
+
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">password</div>
+                  <div class="parameter-content-header-type">required | string</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input string password for login management</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/management/login</div>
+              </div>
+              <pre class="sample" id="management_body_Login"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="management_response_Login"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Management Login -->
+
+      <!-- Start Management Logout -->
+      <section class="first-content-group">
+        <div class="first-content-padding">
+          <div class="content-left">
+            <div class="content-header">Management Logout</div>
+            
+            <div class="parameter-title">Parameters</div>
+
+            <div class="parameters">
+              <div class="parameter-content">
+                <div class="parameter-content-header">
+                  <div class="parameter-content-header-title">token</div>
+                  <div class="parameter-content-header-type">authorization token</div>
+                </div>
+                <div class="parameter-description">
+                  <p class="parameter-descrption-child">Required to input authorization token of login driver</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="content-border">
+              <div class="title">
+                <div class="title-type">POST - </div>
+                <div class="title-link">api/management/logout</div>
+              </div>
+              <pre class="sample" id="management_body_Logout"></pre>
+            </div> 
+            <div class="content-border">
+              <div class="title">Response Sample</div> 
+              <pre class="sample" id="management_response_Logout"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Drivers Logout -->
+
     </div>
     <!-- End Content -->
+
+
 
 
     <!-- Start Script -->
@@ -133,23 +823,280 @@
       let btn = document.querySelector("#btn");
       let sidebar = document.querySelector(".sidebar");
       let searchBtn = document.querySelector(".fa-search");
-      // start user
-      let user_body = 
-      {
-          "first_name" :"Juan",
-          "last_name" :"Magdadaro",
-          "mobile_number" :"+63922222222",
-          "email" :"juan@gmail.comdawdwa"
-      }
-      let user_response = 
-      {
-          "first_name" : "Juan",
-          "last_name" : "Magdadaro", 
-      }
-      // end user
 
-      document.getElementById('user_body').textContent = JSON.stringify(user_body, undefined, 2);
-      document.getElementById('user_response').textContent = JSON.stringify(user_response, undefined, 2);
+      // start user registration
+      let user_body_registration = 
+      {
+          "first_name" :"lastnames",
+          "last_name" :"firstnames",
+          "mobile_number" :"+63922222222",
+          "email" :"email@email.com",
+          "password": "123456789",
+      }
+      let user_response_registration = 
+      {
+          "message": "User created.",
+          "user": {
+              "first_name": "firstnames",
+              "last_name": "lastnames",
+              "mobile_number": "+632222222223",
+              "email": "email@email.com",
+              "password": "123456789",
+              "updated_at": "2021-09-11T15:43:15.000000Z",
+              "created_at": "2021-09-11T15:43:15.000000Z",
+              "id": 2
+          },
+          "token": "4|IIWSVWMkCOAdCwyzNg8eOPkvBu3rlEb448xzx2XT"
+      }
+      // end user registration
+
+      // Start User Login
+      let user_body_login = 
+      {
+          "mobile_number" :"+63922222223",
+          "email" :"email@email.com",
+      }
+      let user_response_login = 
+      {
+        "message": "Successfully login.",
+          "user": {
+              "id": 2,
+              "first_name": "firstnames",
+              "last_name": "lastnames",
+              "mobile_number": "+632222222223",
+              "email": "email@email.com",
+              "email_verified_at": null,
+              "industry": null,
+              "profile_picture": null,
+              "user_rating": null,
+              "updated_at": "2021-09-11T15:43:15.000000Z",
+              "created_at": "2021-09-11T15:43:15.000000Z",
+              "id": 2
+          },
+          "token": "5|IIWSVWMkCOAdCwyzNg8eOPkvBu3rlEb448xzx2XT"
+      }
+      // End User Login
+
+      // Start User Logout
+      let user_body_logout = 
+      {
+          "mobile_number" :"+63922222223",
+          "password" :"123456789",
+      }
+      let user_response_logout = 
+      {
+        "message": "Logged out.",
+      }
+      // End User Logout
+
+      // Start Mobile OTP
+      let driver_body_mobileOtp = 
+      {
+        "mobile_number" :"+63922222223",
+      }
+      let driver_response_mobileOtp = 
+      {
+        "message": "OTP created.",
+        "data": {
+            "otp": "1234",
+            "mobile_number": "+632222222223",
+            "updated_at": "2021-09-11T16:44:14.000000Z",
+            "created_at": "2021-09-11T16:44:14.000000Z",
+            "id": 1
+        }
+      }
+      // End Mobile OTP
+
+      // Start Pre-Register
+      let driver_body_preRegister = 
+      {
+        "otp": "1234",
+        "mobile_number" :"+63922222223",
+        "id": "1"
+      }
+      let driver_response_preRegister = 
+      {
+        "message": "OTP verified.",
+        "data": 
+          {
+            "id": 1,
+            "mobile_number": "+632222222223",
+            "otp": "1234",
+            "created_at": "2021-09-11T16:44:14.000000Z",
+            "updated_at": "2021-09-11T16:44:14.000000Z"
+          }
+      }
+      // End Pre-Register
+
+       // Start Drivers Regisster
+      let driver_body_Register = 
+      {
+        "mobile_number" : "+632222222223",
+        "name" : "firstName",
+        "city" : "cityName",
+        "vehicle_type" : "motorcycle",
+        "driver_license_image" : "",
+        "nbi_clearance" : "",
+        "portrait" : "",
+        "vehicle_registration" : "",
+        "vehicle_front" : "",
+        "vehicle_side" : "",
+        "vehicle_back" : "",
+        "password" : "123456789"
+      }
+      let driver_response_Register = 
+      {
+        "message": "Driver created.",
+        "driver": 
+          {
+            "name": "firstName",
+            "email": null,
+            "mobile_number": "+632222222223",
+            "city": "cityName",
+            "password": "$2y$10$tS.7gx9QOduBvwoHISN59uJ7MnNLytHuLJeiUTHK4GgTKAIRSDwvu",
+            "vehicle_type": "motorcycle",
+            "date_of_birth": null,
+            "driving_license_number": null,
+            "driving_license_expiry": null,
+            "driver_license_image": null,
+            "vehicle_brand": null,
+            "vehicle_model": null,
+            "vehicle_manufacture_year": null,
+            "license_plate_number": null,
+            "nbi_clearance": null,
+            "portrait": null,
+            "deed_of_sale": null,
+            "vehicle_registration": null,
+            "vehicle_front": null,
+            "vehicle_side": null,
+            "vehicle_back": null,
+            "verification_status_id": 8,
+            "updated_at": "2021-09-11T17:56:03.000000Z",
+            "created_at": "2021-09-11T17:56:03.000000Z",
+            "id": 2
+          },
+        "token": "7|FqWCyXGCREi2TNFLHegxD4r5pg19vQ7eBeTZ9TA8"
+      }
+      // End Drivers Register
+
+      // Start Drivers Login
+      let driver_body_Login = 
+      {
+        "mobile_number" : "+632222222223",
+        "password" : "123456789"
+      }
+      let driver_response_Login = 
+      {
+        "message": "Successfully login.",
+        "driver": 
+        {
+            "id": 2,
+            "name": "firstName",
+            "mobile_number": "+632222222223",
+            "email": null,
+            "email_verified_at": null,
+            "city": "cityName",
+            "vehicle_type": "vehicleType",
+            "date_of_birth": null,
+            "driving_license_number": null,
+            "driving_license_expiry": null,
+            "driver_license_image": null,
+            "vehicle_brand": null,
+            "vehicle_model": null,
+            "vehicle_manufacture_year": null,
+            "license_plate_number": null,
+            "training_completed": null,
+            "nbi_clearance": null,
+            "portrait": null,
+            "deed_of_sale": null,
+            "vehicle_registration": null,
+            "vehicle_front": null,
+            "vehicle_side": null,
+            "vehicle_back": null,
+            "password": "$2y$10$tS.7gx9QOduBvwoHISN59uJ7MnNLytHuLJeiUTHK4GgTKAIRSDwvu",
+            "status": null,
+            "order_status": null,
+            "order_goals_per_day": null,
+            "income_goals_per_day": null,
+            "prompt_for_target": null,
+            "rating": null,
+            "number_of_fans": null,
+            "created_at": "2021-09-11T17:56:03.000000Z",
+            "updated_at": "2021-09-11T17:56:03.000000Z",
+            "verification_status_id": 8
+        },
+        "token": "8|xm0MUcmZ2RC2SCYov6pPypz1xZG3MSTt8aMSKmsm"
+      }
+      // End Drivers Login
+
+      // Start Drivers Logout
+      let driver_body_Logout = 
+      {
+        "mobile_number" : "+632222222223",
+        "password" : "123456789"
+      }
+      let driver_response_Logout = 
+      {
+        "message": "Logged out."
+      } 
+      // End Drivers Logout
+
+      // Start Management Login
+      let management_body_Login = 
+      {
+        "mobile_number" : "+632222222223",
+        "password" : "123456789"
+      }
+      let management_response_Login = 
+      {
+        "message": "Successfully login.",
+        "management": 
+          {
+            "id": 1,
+            "email": "sample@gmail.com",
+            "password": "$2y$10$M5.RZK9OlMCVNFg6iE3GX.pZNwV1bUQNFe1FdRULYR.3TPWxdqNjy",
+            "created_at": "2021-09-11T18:50:17.000000Z",
+            "updated_at": "2021-09-11T18:50:17.000000Z"
+          },
+        "token": "9|sj0IDvNHn9FfQoM9NSYexIHpQa4OT3cHEJ1aUu21"
+      } 
+      // End Management Login
+
+      // Start Management Logout
+      let management_body_Logout = 
+      {
+        "email" : "+632222222223",
+        "password" : "123456789"
+      }
+      let management_response_Logout = 
+      {
+        "message": "Logged out."
+      } 
+      // End Management Login
+
+      //user
+      document.getElementById('user_body_registration').textContent = JSON.stringify(user_body_registration, undefined, 2);
+      document.getElementById('user_response_registration ').textContent = JSON.stringify(user_response_registration, undefined, 2);
+      document.getElementById('user_body_login').textContent = JSON.stringify(user_body_login, undefined, 2);
+      document.getElementById('user_response_login').textContent = JSON.stringify(user_response_login, undefined, 2);
+      document.getElementById('user_body_logout').textContent = JSON.stringify(user_body_logout, undefined, 2);
+      document.getElementById('user_response_logout').textContent = JSON.stringify(user_response_logout, undefined, 2);
+      //driver
+      document.getElementById('driver_body_mobileOtp').textContent = JSON.stringify(driver_body_mobileOtp, undefined, 2);
+      document.getElementById('driver_response_mobileOtp').textContent = JSON.stringify(driver_response_mobileOtp, undefined, 2);
+      document.getElementById('driver_body_preRegister').textContent = JSON.stringify(driver_body_preRegister, undefined, 2);
+      document.getElementById('driver_response_preRegister').textContent = JSON.stringify(driver_response_preRegister, undefined, 2);
+      document.getElementById('driver_body_Register').textContent = JSON.stringify(driver_body_Register, undefined, 2);
+      document.getElementById('driver_response_Register').textContent = JSON.stringify(driver_response_Register, undefined, 2);
+      document.getElementById('driver_body_Login').textContent = JSON.stringify(driver_body_Login, undefined, 2);
+      document.getElementById('driver_response_Login').textContent = JSON.stringify(driver_response_Login, undefined, 2);
+      document.getElementById('driver_body_Logout').textContent = JSON.stringify(driver_body_Logout, undefined, 2);
+      document.getElementById('driver_response_Logout').textContent = JSON.stringify(driver_response_Logout, undefined, 2);
+      //management
+      document.getElementById('management_body_Login').textContent = JSON.stringify(management_body_Login, undefined, 2);
+      document.getElementById('management_response_Login').textContent = JSON.stringify(management_response_Login, undefined, 2);
+      document.getElementById('management_body_Logout').textContent = JSON.stringify(management_body_Logout, undefined, 2);
+      document.getElementById('management_response_Logout').textContent = JSON.stringify(management_response_Logout, undefined, 2);
 
       btn.onclick = function(){
         sidebar.classList.toggle("active");
